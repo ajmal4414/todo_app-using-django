@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Task-lists</title>
+</head>
+<body>
+<div class="container"></div>
+   {% if request.user.is_authenticated %}
+<p>{{request.user}}</p>
+   <a href="">Logout</a>
+   {% else %}
+   {% endif %}
+<center>
+<h1>My To do lists</h1>
+<!--<a href="{ % url"Task-lists-->
+
+<table>
+    <tr>
+        <th>Items</th><br>
+    </tr>
+    {% for tasks in Tasks %}
+    <tr>
+        <td>{{tasks.title}}</td>
+        <td>{{tasks.completed}}</td>
+        <td>{{tasks.created}}</td>
+        <td>{{tasks.description}}</td>
+
+
+        <td> <a href="{% url 'task-create' %}">Add Task </a><br></td>
+        <td> <a href="{% url 'task-update' tasks.id %}">Edit </a> <br></td>
+        <td> <a href="{% url 'task-delete' tasks.id %}">Delete </a> <br></td>
+        <td> <a href="{% url 'task-detail' tasks.id %}">View </a> <br></td>
+
+    </tr>
+    {% endfor %}
+</center>
+</table>
+</body>
+</html>

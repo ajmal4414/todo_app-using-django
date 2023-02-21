@@ -1,0 +1,30 @@
+body {
+background-color:lightblue;
+font-family:verdana;
+}
+
+h1{
+color:green
+}
+
+body {
+margin:auto;
+ width: 380px;
+  padding: 20px;
+  border: 15px solid green;
+  margin: 100;
+  overflow-wrap: break-word;
+}
+th{
+color:black
+}
+
+td{
+color:black
+}
+.input{
+color:green
+}
+a{
+color:black
+}

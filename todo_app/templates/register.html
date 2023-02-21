@@ -1,0 +1,21 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="{% static 'css/registerstyle.css' %}" >
+    <title>Register</title>
+</head>
+<body>
+<center>
+    <a href="{% url 'login' %}"></a>
+<h1> Registerform</h1>
+  <form method="post" action="">
+      {% csrf_token %}
+      {{form.as_p}}
+  <button type="submit" >Submit</button>
+
+</form>
+</center>
+</body>
+</html>
