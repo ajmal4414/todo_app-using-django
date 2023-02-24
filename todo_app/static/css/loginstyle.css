@@ -1,12 +1,9 @@
-body{
-background-color:gray
-}
-
 body {
-margin:auto;
- width: 380px;
-  padding: 20px;
-  border: 10px solid black;
-  margin: 100;
-  overflow-wrap: break-word;
+background-color:white;
+font-family:verdana;
+ border: 3px solid gray;
+ margin:auto;
+ width: 500px;
+  padding: 0px;
+
 }
